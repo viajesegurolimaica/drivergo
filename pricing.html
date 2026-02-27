@@ -1,0 +1,829 @@
+<!DOCTYPE html>
+
+<html lang="es">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Tarifas taxi Lima - Ica | Viaje seguro — Driver Go</title>
+<!-- favicons Icons -->
+<link href="assets/images/favicons/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180"/>
+<link href="assets/images/favicons/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="assets/images/favicons/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png"/>
+<link href="assets/images/favicons/site.webmanifest" rel="manifest"/>
+<meta name="description" content="Tarifas para taxi Lima–Ica: opciones cómodas y seguras (sedán/SUV). Ruta directa, puerta a puerta y reserva por WhatsApp."/>
+<!-- fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&amp;display=swap" rel="stylesheet"/>
+<link href="assets/vendors/bootstrap/css/bootstrap.min.css" rel="stylesheet"/>
+<link href="assets/vendors/bootstrap-select/bootstrap-select.min.css" rel="stylesheet"/>
+<link href="assets/vendors/animate/animate.min.css" rel="stylesheet"/>
+<link href="assets/vendors/fontawesome/css/all.min.css" rel="stylesheet"/>
+<link href="assets/vendors/jquery-ui/jquery-ui.css" rel="stylesheet"/>
+<link href="assets/vendors/jarallax/jarallax.css" rel="stylesheet"/>
+<link href="assets/vendors/jquery-magnific-popup/jquery.magnific-popup.css" rel="stylesheet"/>
+<link href="assets/vendors/nouislider/nouislider.min.css" rel="stylesheet"/>
+<link href="assets/vendors/nouislider/nouislider.pips.css" rel="stylesheet"/>
+<link href="assets/vendors/tiny-slider/tiny-slider.css" rel="stylesheet"/>
+<link href="assets/vendors/cityride-icons/style.css" rel="stylesheet"/>
+<link href="assets/vendors/owl-carousel/css/owl.carousel.min.css" rel="stylesheet"/>
+<link href="assets/vendors/owl-carousel/css/owl.theme.default.min.css" rel="stylesheet"/>
+<!-- template styles -->
+<link href="assets/css/cityride.css" rel="stylesheet"/>
+<style>
+  .toasa-badges{display:flex;flex-wrap:wrap;gap:10px;margin-top:14px;}
+  .toasa-badge{display:inline-flex;align-items:center;padding:10px 14px;border-radius:999px;background:#f2f4f7;color:#111;font-weight:700}
+  .toasa-badge--cta{background:#25D366;color:#fff;text-decoration:none;}
+  .toasa-list{margin:0;padding-left:18px;}
+  .toasa-steps{margin:0;padding-left:18px;}
+  .toasa-steps li{margin-bottom:8px;}
+
+  .wa-float{
+    position: fixed;
+    right: 18px;
+    bottom: 18px;
+    z-index: 9999;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 14px;
+    border-radius: 999px;
+    background: #25D366;
+    color: #fff;
+    text-decoration: none;
+    box-shadow: 0 10px 30px rgba(0,0,0,.18);
+    transform: translateZ(0);
+    transition: transform .18s ease, box-shadow .18s ease, filter .18s ease;
+    font-weight: 700;
+    letter-spacing: .2px;
+  }
+  .wa-float:hover{
+    transform: translateY(-2px);
+    filter: brightness(1.02);
+    box-shadow: 0 14px 36px rgba(0,0,0,.22);
+  }
+  .wa-float__icon{
+    width: 42px;
+    height: 42px;
+    border-radius: 999px;
+    display: grid;
+    place-items: center;
+    background: rgba(255,255,255,.18);
+    font-size: 22px;
+    line-height: 1;
+  }
+  .wa-float__text{
+    display: none;
+    font-size: 14px;
+    white-space: nowrap;
+  }
+  @media (min-width: 768px){
+    .wa-float__text{ display: inline; }
+  }
+  .wa-float__ping{
+    position:absolute;
+    inset: -6px;
+    border-radius: 999px;
+    background: rgba(37, 211, 102, .25);
+    animation: waPulse 1.8s ease-in-out infinite;
+    z-index: -1;
+  }
+  @keyframes waPulse{
+    0%   { transform: scale(.92); opacity: .65; }
+    60%  { transform: scale(1.08); opacity: .25; }
+    100% { transform: scale(1.12); opacity: 0; }
+  }
+
+  /* Separation from scroll-to-top / progress indicator (common templates) */
+  .scroll-to-top, .scroll-top, .progress-wrap, .scroll-top-wrapper{
+    bottom: 86px !important;
+    right: 18px !important;
+  }
+</style><style>
+  .toasa-extra-why .service-card{box-shadow: 0 10px 30px rgba(0,0,0,.06);}
+  .toasa-extra-why .service-card__title{margin-bottom:8px;}
+</style><style>
+/* Quitar indicador (flecha + cuadro) de items del menú */
+.main-menu__list > li.dropdown > a:after,
+.main-menu__list > li.dropdown > a:before,
+.main-menu__list > li.megamenu > a:after,
+.main-menu__list > li.megamenu > a:before{
+  display:none !important;
+  content:none !important;
+}
+</style>
+<style id="toasa-global-fixes">
+/* ==========================================================
+   Estilo global (Lima–Ica): sin bordes feos, más aire, animación
+   ========================================================== */
+:root {
+  --wa: #25D366;
+  --card-radius: 18px;
+  --card-shadow: 0 10px 30px rgba(0,0,0,.08);
+  --card-shadow-hover: 0 16px 44px rgba(0,0,0,.12);
+}
+
+/* Cards: quitar líneas/bordes y dar look moderno */
+.service-card,
+.taxi-card,
+.pricing-card,
+.demo-one__card,
+.testimonial-card,
+.sidebar-one__item,
+.why-choose-one__list__item,
+.features-one__single,
+.why-choose-one__single,
+.why-choose-four__list__item,
+.faq-accordion .accordion-item,
+.faq-accordion .accordion-content {
+  border: 0 !important;
+  outline: none !important;
+  border-radius: var(--card-radius) !important;
+  box-shadow: var(--card-shadow) !important;
+  background: #fff !important;
+  overflow: hidden;
+  transition: transform .22s ease, box-shadow .22s ease, filter .22s ease;
+  will-change: transform;
+}
+.service-card:hover,
+.taxi-card:hover,
+.pricing-card:hover,
+.demo-one__card:hover,
+.testimonial-card:hover,
+.sidebar-one__item:hover,
+.why-choose-one__list__item:hover,
+.features-one__single:hover,
+.why-choose-one__single:hover,
+.why-choose-four__list__item:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--card-shadow-hover) !important;
+  filter: brightness(1.01);
+}
+
+/* Espaciado interno: evitar textos pegados */
+.service-card > .service-card__middle,
+.service-card > .service-card__content,
+.taxi-card__content,
+.pricing-card__content,
+.blog-card__content,
+.sidebar-one__item,
+.why-choose-one__list__item,
+.features-one__single,
+.why-choose-one__single,
+.why-choose-four__list__item,
+.faq-accordion .accordion-item,
+.faq-accordion .accordion-content {
+  padding: 30px 30px !important;
+}
+
+/* Tipografía ordenada */
+.section-space p, .section-space li,
+.service-card p, .taxi-card p, .pricing-card p, .blog-card p {
+  line-height: 1.75;
+  margin: 0 0 14px 0 !important;
+  text-align: justify;
+  text-justify: inter-word;
+}
+.service-card__title, .taxi-card__title, .pricing-card__title, .blog-card__title {
+  margin: 0 0 12px 0 !important;
+  line-height: 1.2;
+}
+.service-card ul, .taxi-card ul, .pricing-card ul, .blog-card ul, .toasa-list {
+  margin: 12px 0 0 0 !important;
+  padding-left: 20px !important;
+}
+.service-card li, .taxi-card li, .pricing-card li, .blog-card li, .toasa-list li {
+  margin: 0 0 10px 0 !important;
+  line-height: 1.65;
+}
+
+/* En móvil: mejor lectura sin justificado */
+@media (max-width:575px){
+  .service-card > .service-card__middle,
+  .service-card > .service-card__content,
+  .taxi-card__content,
+  .pricing-card__content,
+  .blog-card__content,
+  .sidebar-one__item,
+  .why-choose-one__list__item,
+  .features-one__single,
+  .why-choose-one__single,
+  .why-choose-four__list__item,
+  .faq-accordion .accordion-item,
+  .faq-accordion .accordion-content {
+    padding: 20px 18px !important;
+  }
+  .section-space p, .section-space li {
+    text-align: left;
+  }
+}
+
+/* WhatsApp flotante + tooltip */
+.wa-float {
+  position: fixed !important;
+  right: 18px !important;
+  bottom: 18px !important;
+  z-index: 99999 !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 10px !important;
+  padding: 12px 14px !important;
+  border-radius: 999px !important;
+  background: var(--wa) !important;
+  color: #fff !important;
+  text-decoration: none !important;
+  box-shadow: 0 10px 30px rgba(0,0,0,.18) !important;
+  transition: transform .18s ease, box-shadow .18s ease, filter .18s ease !important;
+  font-weight: 900 !important;
+  letter-spacing: .2px !important;
+  line-height: 1 !important;
+  isolation: isolate;
+}
+.wa-float:hover{ transform: translateY(-2px); filter: brightness(1.02); box-shadow:0 14px 36px rgba(0,0,0,.22) !important; }
+.wa-float__icon {
+  width: 42px; height: 42px; border-radius: 999px;
+  display: grid; place-items: center;
+  background: rgba(255,255,255,.18);
+  font-size: 22px;
+}
+.wa-float__text{ display:none; font-size:14px; white-space:nowrap; }
+@media (min-width:768px){ .wa-float__text{ display:inline; } }
+.wa-float__ping {
+  position: absolute;
+  inset: -6px;
+  border-radius: 999px;
+  background: rgba(37,211,102,.25);
+  animation: waPulse 1.8s ease-in-out infinite;
+  z-index: -1;
+}
+@keyframes waPulse {
+  0%{transform:scale(.92);opacity:.65;}
+  60%{transform:scale(1.08);opacity:.25;}
+  100%{transform:scale(1.12);opacity:0;}
+}
+.wa-float__tooltip {
+  position:absolute;
+  right: calc(100% + 12px);
+  top: 50%;
+  transform: translateY(-50%) translateX(10px);
+  background: var(--wa);
+  color:#fff;
+  padding:10px 12px;
+  border-radius:999px;
+  font-weight:900;
+  font-size:14px;
+  white-space:nowrap;
+  box-shadow:0 10px 30px rgba(0,0,0,.18);
+  opacity:0;
+  visibility:hidden;
+  pointer-events:none;
+  transition:opacity .18s ease, transform .18s ease, visibility .18s ease;
+}
+.wa-float__tooltip:after {
+  content:"";
+  position:absolute;
+  right:-6px;
+  top:50%;
+  transform: translateY(-50%) rotate(45deg);
+  width:12px;
+  height:12px;
+  background: var(--wa);
+  border-radius:2px;
+}
+.wa-float:hover .wa-float__tooltip,
+.wa-float:focus .wa-float__tooltip,
+.wa-float:focus-within .wa-float__tooltip,
+.wa-float.wa-float--show-tip .wa-float__tooltip {
+  opacity:1;
+  visibility:visible;
+  transform: translateY(-50%) translateX(0);
+}
+@media (max-width:575px){
+  .wa-float__tooltip {
+    right: 0;
+    top: auto;
+    bottom: calc(100% + 10px);
+    transform: translateY(10px);
+    font-size: 13px;
+    padding: 9px 12px;
+  }
+  .wa-float__tooltip:after {
+    right: 18px;
+    top: auto;
+    bottom: -6px;
+    transform: rotate(45deg);
+  }
+  .wa-float:hover .wa-float__tooltip{ opacity:0; visibility:hidden; }
+  .wa-float.wa-float--show-tip .wa-float__tooltip{ opacity:1; visibility:visible; transform: translateY(0); }
+}
+
+/* Separar del scroll-to-top si existe */
+.scroll-to-top, .scroll-top, .progress-wrap, .scroll-top-wrapper {
+  bottom: 86px !important;
+  right: 18px !important;
+}
+
+/* Menú: quitar dropdowns visuales que no usaremos */
+.main-menu__list > li > ul { display:none !important; }
+
+/* Animación suave de aparición */
+@keyframes toasaReveal{
+  from{opacity:0; transform: translateY(10px);}
+  to{opacity:1; transform: translateY(0);}
+}
+.service-card, .taxi-card, .pricing-card, .demo-one__card, .testimonial-card, .sidebar-one__item, .why-choose-one__list__item, .features-one__single, .why-choose-one__single, .why-choose-four__list__item{
+  animation: toasaReveal .55s ease both;
+}
+@media (prefers-reduced-motion: reduce){
+  .service-card, .taxi-card, .pricing-card, .demo-one__card, .testimonial-card, .sidebar-one__item, .why-choose-one__list__item, .features-one__single, .why-choose-one__single, .why-choose-four__list__item{
+    animation: none !important;
+    transition: none !important;
+  }
+}
+
+</style><style id="toasa-card-images-style">
+/* Cards con imagen superior (solo estas páginas) */
+.toasa-card-media{margin:-32px -32px 18px -32px; overflow:hidden; border-radius:18px 18px 0 0;}
+.toasa-card-media img{width:100%; height:180px; object-fit:cover; display:block; transform:translateZ(0); transition:transform .45s ease;}
+.service-card:hover .toasa-card-media img,
+.taxi-card:hover .toasa-card-media img,
+.pricing-card:hover .toasa-card-media img{transform:scale(1.04);}
+@media (max-width:575px){
+  .toasa-card-media{margin:-20px -18px 14px -18px;}
+  .toasa-card-media img{height:150px;}
+}
+</style><!-- Open Graph / WhatsApp preview -->
+<meta property="og:type" content="website"/>
+<meta property="og:site_name" content="Taxi Lima–Ica"/>
+<meta property="og:url" content="https://TU-DOMINIO.com/pricing.html"/>
+<meta property="og:title" content="Tarifas taxi Lima - Ica | Viaje seguro — Driver Go"/>
+<meta property="og:description" content="Tarifas para taxi Lima–Ica: opciones cómodas y seguras (sedán/SUV). Ruta directa, puerta a puerta y reserva por WhatsApp."/>
+<meta property="og:image" content="https://TU-DOMINIO.com/assets/images/og-image.jpg"/>
+<meta property="og:image:width" content="1200"/>
+<meta property="og:image:height" content="630"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<link rel="canonical" href="https://TU-DOMINIO.com/pricing.html"/>
+<!-- /Open Graph -->
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "TaxiService",
+  "name": "Driver Go",
+  "url": "https://TU-DOMINIO.com/pricing.html",
+  "telephone": "+51XXXXXXXXX",
+  "areaServed": [
+    {
+      "@type": "AdministrativeArea",
+      "name": "Lima, Perú"
+    },
+    {
+      "@type": "AdministrativeArea",
+      "name": "Ica, Perú"
+    }
+  ],
+  "description": "Taxi privado para viaje seguro Lima–Ica, directo y puerta a puerta. Reserva por WhatsApp.",
+  "image": "https://TU-DOMINIO.com/assets/images/og-image.jpg"
+}
+</script>
+<style id="toasa-call-float">
+/* Botón flotante de llamada */
+.call-float{
+  position: fixed;
+  left: 18px;
+  right: auto;
+  bottom: 18px;
+  width: 54px;
+  height: 54px;
+  border-radius: 999px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: #25D366;
+  color: #fff;
+  text-decoration: none;
+  box-shadow: 0 10px 30px rgba(0,0,0,.18);
+  z-index: 999999;
+  transition: transform .18s ease, box-shadow .18s ease, filter .18s ease;
+}
+.call-float:hover{
+  transform: translateY(-2px);
+  filter: brightness(1.02);
+  box-shadow: 0 14px 36px rgba(0,0,0,.22);
+  color:#fff;
+}
+.call-float svg{ width: 22px; height: 22px; fill: #fff; }
+@media (max-width: 575px){
+  .call-float{ left: 16px; bottom: 18px; }
+}
+</style>
+</head>
+<body class="custom-cursor toasa-enhanced">
+<div class="custom-cursor__cursor"></div>
+<div class="custom-cursor__cursor-two"></div>
+<div class="preloader">
+<div class="preloader__image" style="background-image: url(assets/images/loader.png);"></div>
+</div>
+<!-- /.preloader -->
+<div class="page-wrapper">
+<div class="topbar">
+<div class="container-fluid">
+<div class="topbar__inner">
+<ul class="list-unstyled topbar__info">
+<li>
+<span class="topbar__info__icon"><i class="icon-paper-plane"></i></span>
+<a href="mailto:viajesegurolimaica@gmail.com">viajesegurolimaica@gmail.com</a>
+</li>
+<li>
+<span class="topbar__info__icon topbar__info__icon--location"><i class="icon-maps-and-flags"></i></span>
+<a href="https://www.google.com/maps/place/Lima,+Per%C3%BA/" rel="noopener" target="_blank">Lima, Perú • Ruta Lima – Ica</a>
+</li>
+</ul><!-- /.list-unstyled topbar__info -->
+<div class="topbar__right">
+<!-- /.topbar__language -->
+<!-- /.topbar__login -->
+</div><!-- /.topbar__right -->
+</div><!-- /.topbar__inner -->
+</div><!-- /.container-fluid -->
+</div><!-- /.topbar -->
+<header class="main-header sticky-header sticky-header--normal">
+<div class="container-fluid">
+<div class="main-header__inner">
+<div class="main-header__logo logo-retina">
+<a href="index.html"> <img alt="cityride HTML" height="55" src="assets/images/logo-dark.png" width="103"/></a>
+</div><!-- /.main-header__logo -->
+<div class="main-header__right">
+<nav class="main-header__nav main-menu">
+<ul class="main-menu__list">
+<li><a href="index.html">Inicio</a></li>
+<li><a href="about.html">Nosotros</a></li>
+<li><a href="services.html">Servicios</a></li>
+<li class="current"><a href="pricing.html">Tarifas</a></li>
+<li><a href="taxi.html">Unidades</a></li>
+<li><a href="driver.html">Conductores</a></li>
+<li><a href="blog-details.html">Consejos</a></li>
+<li><a href="contact.html">Contacto</a></li>
+</ul>
+</nav><!-- /.main-header__nav -->
+<div class="mobile-nav__btn mobile-nav__toggler">
+<span></span>
+<span></span>
+<span></span>
+</div><!-- /.mobile-nav__toggler -->
+<!-- /.search-toggler -->
+<!-- /.search-toggler -->
+<div class="main-header__right__inner">
+<div class="main-header__right__inner__bg">
+<div class="main-header__right__inner__bg__inner" style="background-image: url(assets/images/shapes/header-shape-1-1.png);"></div>
+</div><!-- /.main-header__right__inner__bg -->
+<div class="main-header__call">
+<span class="main-header__call__icon">
+<i class="icon-telephone-call"></i>
+</span><!-- /.main-header__call__icon -->
+<div class="main-header__call__content">
+<a class="main-header__call__number" href="tel:+51 977 795 841">+51 977 795 841</a>
+<!-- /.main-header__call__number -->
+</div><!-- /.main-header__call__content -->
+</div><!-- /.main-header__call -->
+<div class="main-header__btn-box">
+<a class="main-header__btn cityride-btn cityride-btn--secondary" href="https://wa.link/u8d8r6">
+<span class="cityride-btn__icon"><i class="icon-front-car"></i></span>
+<span>Reservar</span>
+</a><!-- /.main-header__btn -->
+<div class="main-header__btn__border"></div><!-- /.main-header__btn__border -->
+</div><!-- /.main-header__btn__box -->
+</div><!-- /.main-header__right__inner -->
+</div><!-- /.main-header__right -->
+</div><!-- /.main-header__inner -->
+</div><!-- /.container-fluid -->
+</header><!-- /.main-header -->
+<section class="page-header">
+<div class="page-header__bg" style="background-image: url(assets/images/backgrounds/page-header-bg-1-1.jpg);"></div>
+<!-- /.page-header__bg -->
+<div class="container">
+<div class="page-header__content">
+<h2 class="page-header__title">Tarifas</h2>
+<ul class="cityride-breadcrumb list-unstyled">
+<li><span class="cityride-breadcrumb__icon"><i class="icon-home"></i></span><a href="index.html">Inicio</a></li>
+<li><span>Planes</span></li>
+</ul><!-- /.thm-breadcrumb list-unstyled -->
+</div><!-- /.page-header__content -->
+</div><!-- /.container -->
+<div class="page-header__element-one">
+<img alt="" src="assets/images/shapes/pagination-left.png"/>
+</div><!-- /.page-header__element-one -->
+<div class="page-header__element-two">
+<img alt="" src="assets/images/shapes/pagination-right.png"/>
+</div><!-- /.page-header__element-two -->
+</section>
+<section class="section-space">
+<div class="container">
+<div class="sec-title text-center">
+<div class="sec-title__top">
+<div class="sec-title__shape"></div>
+<h6 class="sec-title__tagline">Tarifas</h6>
+</div>
+<h3 class="sec-title__title">Tarifas y modalidades Lima – Ica</h3>
+</div>
+<div class="row gutter-y-30">
+<div class="col-lg-12">
+<div class="service-card">
+<div class="service-card__content"><div class="toasa-card-media"><img alt="" src="assets/images/resources/pricing-1-1.jpg"/></div>
+<h4 class="service-card__title">Tarifas claras y opciones flexibles</h4>
+<p class="service-card__text">
+          Te compartimos referencias para que elijas la modalidad que mejor se adapta a tu viaje.
+          Para traslados privados (auto exclusivo, van o servicio corporativo), la tarifa se cotiza según punto exacto de recojo,
+          número de pasajeros, equipaje y paradas.
+        </p>
+</div>
+</div>
+</div>
+<div class="col-md-6 col-lg-4">
+<div class="pricing-one__card">
+<div class="pricing-one__card__top">
+<h4 class="pricing-one__card__title">Salida Programada</h4>
+<p class="pricing-one__card__text">Ideal si deseas viajar en horarios definidos.</p>
+</div>
+<div class="pricing-one__card__price">
+<h3 class="pricing-one__card__amount">S/ 70 </h3>
+<p class="pricing-one__card__duration">por persona (desde)</p>
+</div>
+<ul class="pricing-one__card__list list-unstyled">
+<li><i class="fas fa-check-circle"></i> Horarios: 5:00 am a 6:00 pm</li>
+<li><i class="fas fa-check-circle"></i> Puntos: C.C. Plaza Norte - Puerta principal, Av. 28 de Julio – La Victoria, C.C. La Rambla - Av. Javier Prado Este, Puente Próceres - Frente a Mall del Sur y Puente KM.40 </li>
+<li><i class="fas fa-check-circle"></i> Confirmación por WhatsApp</li>
+</ul>
+<div class="pricing-one__card__btn">
+<a class="cityride-btn cityride-btn--secondary" href="https://wa.link/u8d8r6" rel="noopener" target="_blank">
+<span>Reservar</span>
+</a>
+</div>
+</div>
+</div>
+<div class="col-md-6 col-lg-4">
+<div class="pricing-one__card">
+<div class="pricing-one__card__top">
+<h4 class="pricing-one__card__title">Taxi Privado</h4>
+<p class="pricing-one__card__text">Auto exclusivo puerta a puerta.</p>
+</div>
+<div class="pricing-one__card__price">
+<h3 class="pricing-one__card__amount">Cotización</h3>
+<p class="pricing-one__card__duration">según tu ruta</p>
+</div>
+<ul class="pricing-one__card__list list-unstyled">
+<li><i class="fas fa-check-circle"></i> Recojo en cualquier distrito</li>
+<li><i class="fas fa-check-circle"></i> Paradas coordinadas</li>
+<li><i class="fas fa-check-circle"></i> Ideal para familias y ejecutivos</li>
+</ul>
+<div class="pricing-one__card__btn">
+<a class="cityride-btn cityride-btn--secondary" href="https://wa.link/u8d8r6" rel="noopener" target="_blank">
+<span>Cotizar</span>
+</a>
+</div>
+</div>
+</div>
+<div class="col-md-6 col-lg-4">
+<div class="pricing-one__card">
+<div class="pricing-one__card__top">
+<h4 class="pricing-one__card__title">Corporativo</h4>
+<p class="pricing-one__card__text">Para empresas y equipos de trabajo.</p>
+</div>
+<div class="pricing-one__card__price">
+<h3 class="pricing-one__card__amount">Convenio</h3>
+<p class="pricing-one__card__duration">a medida</p>
+</div>
+<ul class="pricing-one__card__list list-unstyled">
+<li><i class="fas fa-check-circle"></i> Reserva programada</li>
+<li><i class="fas fa-check-circle"></i> Atención 24/7</li>
+<li><i class="fas fa-check-circle"></i> Servicio formal y puntual</li>
+</ul>
+<div class="pricing-one__card__btn">
+<a class="cityride-btn cityride-btn--secondary" href="https://wa.link/u8d8r6" rel="noopener" target="_blank">
+<span>Solicitar propuesta</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+<section class="section-space" style="padding-top:0;">
+<div class="container">
+<div class="service-card">
+<div class="service-card__content"><div class="toasa-card-media"><img alt="" src="assets/images/resources/pricing-1-2.jpg"/></div>
+<h4 class="service-card__title">Proceso de Reserva</h4>
+<ol class="toasa-steps">
+<li>Contáctanos por WhatsApp.</li>
+<li>Indícanos fecha, hora, lugar de recojo y destino.</li>
+<li>Recibe la cotización y confirma tu reserva.</li>
+<li>Viaja tranquilo entre Lima e Ica con un servicio privado, seguro y confiable.</li>
+</ol>
+</div>
+</div>
+</div>
+</section>
+</div>
+</section><footer class="main-footer">
+<div class="main-footer__inner">
+<div class="main-footer__top">
+<div class="main-footer__bg" style="background-image: url(assets/images/shapes/footer-bg-1-1.png);"></div>
+<div class="container">
+<div class="row gutter-y-40 justify-content-center text-center">
+<div class="wow fadeInUp col-xl-5 col-lg-6 col-md-10 col-sm-12" data-wow-delay="00ms" data-wow-duration="1500ms">
+<div class="footer-widget footer-widget--about">
+<a class="footer-widget__logo logo-retina" href="index.html">
+<img alt="cityride HTML Template" height="55" src="assets/images/logo-light.png" width="103"/>
+</a>
+<p class="footer-widget__about-text">Taxi Ejecutivo Lima – Ica Servicio profesional de transporte privado puerta a puerta entre Lima e Ica. Viaja seguro, cómodo y puntual con conductores verificados y vehículos modernos. 📲 Atención inmediata por WhatsApp 24/7.</p>
+<!-- /.footer-widget__about-text -->
+<div class="footer-widget__social">
+<a href="https://facebook.com"> <i aria-hidden="true" class="fab fa-facebook-f"></i> <span class="sr-only">Facebook</span> </a>
+<a href="https://twitter.com"> <i aria-hidden="true" class="fab fa-twitter"></i> <span class="sr-only">Twitter</span> </a>
+<a href="https://linkedin.com"> <i aria-hidden="true" class="fab fa-linkedin-in"></i> <span class="sr-only">Linkedin</span> </a>
+<a href="https://youtube.com"> <i aria-hidden="true" class="fab fa-youtube"></i> <span class="sr-only">Youtube</span> </a>
+</div><!-- /.footer-widget__call -->
+</div><!-- /.footer-widget -->
+</div><!-- /.col-xl-3 col-lg-6 -->
+<!-- /.col-xl-2 col-lg-3 col-md-4 -->
+<!-- /.col-xl-2 col-lg-3 col-md-4 -->
+<div class="wow fadeInUp col-xl-5 col-lg-6 col-md-10 col-sm-12" data-wow-delay="300ms" data-wow-duration="1500ms">
+<div class="footer-widget footer-widget--contact">
+<h2 class="footer-widget__title">Contáctacnos</h2><!-- /.footer-widget__title -->
+<ul class="list-unstyled footer-widget__info">
+<li>
+<span class="footer-widget__info__icon">
+<i class="icon-email"></i>
+</span><!-- /.footer-widget__info__icon -->
+<a href="mailto:viajesegurolimaica@gmail.com">viajesegurolimaica@gmail.com</a>
+</li>
+<li>
+<span class="footer-widget__info__icon">
+<i class="icon-telephone-call"></i>
+</span><!-- /.footer-widget__info__icon -->
+<a href="tel:+51 977 795 841">+51 977 795 841</a>
+</li>
+</ul><!-- /.list-unstyled -->
+<form action="#" class="footer-widget__newsletter mc-form" data-url="MAILCHIMP_FORM_URL">
+<div class="form-group__form">
+<input name="EMAIL" placeholder="Your email address" type="email"/>
+<button class="cityride-btn cityride-btn--secondary" type="submit"><span class="icon-arrow-left1"></span></button>
+</div><!-- /.form-group -->
+<div class="form-group__check">
+<input id="check" name="checkbox" type="checkbox"/>
+<label for="check">Acepto la <a href="#">Política de privacidad</a>.</label>
+</div><!-- /.form-group -->
+</form><!-- /.footer-widget__newsletter mc-form -->
+<div class="mc-form__response"></div><!-- /.mc-form__response -->
+</div><!-- /.footer-widget -->
+</div><!-- /.col-xl-4 col-lg-5 col-md-4 -->
+</div><!-- /.row -->
+</div><!-- /.container -->
+<div class="main-footer__top__element">
+<img alt="" src="assets/images/shapes/footer-shape.png"/>
+</div><!-- /.main-footer__top__element -->
+</div><!-- /.main-footer__top -->
+<div class="main-footer__bottom">
+<div class="container">
+<div class="main-footer__bottom__inner">
+<p class="main-footer__copyright">© All Copyright 2026 by DinoGráfia</p>
+<ul class="list-unstyled main-footer__bottom__list">
+</ul><!-- /.list-unstyled -->
+</div><!-- /.main-footer__inner -->
+</div><!-- /.container -->
+</div><!-- /.main-footer__bottom -->
+</div><!-- /.main-footer__inner -->
+</footer><!-- /.main-footer -->
+<a class="call-float" href="tel:+51922025707" aria-label="Llamar">
+  <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+    <path d="M6.62 10.79a15.053 15.053 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1.01-.24c1.12.37 2.33.57 3.58.57a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1C10.07 21 3 13.93 3 5a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.46.57 3.58a1 1 0 0 1-.24 1.01l-2.2 2.2z"/>
+  </svg>
+</a>
+<a aria-label="Cotizar por WhatsApp" class="wa-float" href="https://wa.link/u8d8r6" rel="noopener" target="_blank">
+<span aria-hidden="true" class="wa-float__ping"></span>
+<span aria-hidden="true" class="wa-float__icon">
+<i class="fab fa-whatsapp"></i>
+</span>
+<span class="wa-float__text">WhatsApp</span>
+<span aria-hidden="true" class="wa-float__tooltip">¡Hola, reserva ahora por WhatsApp!</span></a></div><!-- /.page-wrapper -->
+<div class="mobile-nav__wrapper">
+<div class="mobile-nav__overlay mobile-nav__toggler"></div><!-- /.mobile-nav__overlay -->
+<div class="mobile-nav__content">
+<span class="mobile-nav__close mobile-nav__toggler"><i class="icon-x"></i></span>
+<div class="logo-box logo-retina">
+<a aria-label="logo image" href="index.html"><img alt="logo" src="assets/images/logo-light.png" width="175"/></a>
+</div><!-- /.logo-box -->
+<div class="mobile-nav__container"></div><!-- /.mobile-nav__container -->
+<ul class="mobile-nav__contact list-unstyled">
+<li>
+<span class="mobile-nav__contact__icon">
+<i class="fa fa-envelope"></i>
+</span>
+<a href="mailto:viajesegurolimaica@gmail.com">viajesegurolimaica@gmail.com</a>
+</li>
+<li>
+<span class="mobile-nav__contact__icon">
+<i class="fa fa-phone-alt"></i>
+</span>
+<a href="tel:+51 977 795 841">+51 977 795 841</a>
+</li>
+</ul><!-- /.mobile-nav__contact -->
+<div class="mobile-nav__social">
+<a href="https://facebook.com"> <i aria-hidden="true" class="fab fa-facebook-f"></i> <span class="sr-only">Facebook</span> </a>
+<a href="https://twitter.com"> <i aria-hidden="true" class="fab fa-twitter"></i> <span class="sr-only">Twitter</span> </a>
+<a href="https://instagram.com"> <i aria-hidden="true" class="fab fa-instagram"></i> <span class="sr-only">Instagram</span> </a>
+<a href="https://youtube.com"> <i aria-hidden="true" class="fab fa-youtube"></i> <span class="sr-only">Youtube</span> </a>
+</div><!-- /.mobile-nav__social -->
+</div><!-- /.mobile-nav__content -->
+</div><!-- /.mobile-nav__wrapper -->
+<!-- /.search-popup -->
+<aside class="sidebar-one">
+<div class="sidebar-one__overlay sidebar-btn__toggler"></div><!-- /.siderbar-ovarlay -->
+<div class="sidebar-one__content">
+<span class="sidebar-one__close sidebar-btn__toggler"><i class="icon-x"></i></span>
+<div class="sidebar-one__logo sidebar-one__item logo-retina"> <a aria-label="logo image" href="index.html"><img alt="logo" height="55" src="assets/images/logo-light.png" width="104"/></a></div><!-- /.sidebar-one__logo -->
+<div class="sidebar-one__about sidebar-one__item">
+<p class="sidebar-one__about__text">Taxi profesional Lima – Ica con atención por WhatsApp 24/7. Recojo puerta a puerta, conductores verificados y precio confirmado antes de viajar.</p>
+</div><!-- /.sidebar-one__about -->
+<div class="sidebar-one__info sidebar-one__item">
+<h4 class="sidebar-one__title">Contacto</h4>
+<ul class="sidebar-one__info__list">
+<li>
+<span class="sidebar-one__info__icon sidebar-one__info__icon--location">
+<i class="icon-maps-and-flags"></i>
+</span>
+<address>85 Ketch Harbour Road Bensal PA 19020</address>
+</li>
+<li>
+<span class="sidebar-one__info__icon">
+<i class="icon-paper-plane"></i>
+</span>
+<a href="mailto:viajesegurolimaica@gmail.com">viajesegurolimaica@gmail.com</a>
+</li>
+<li>
+<span class="sidebar-one__info__icon">
+<i class="icon-telephone-call"></i>
+</span>
+<a href="tel:+51 977 795 841">+51 977 795 841</a>
+</li>
+</ul><!-- /.sidebar-one__info__list -->
+</div><!-- /.sidebar-one__info -->
+<div class="sidebar-one__social social-links sidebar-one__item">
+<a href="https://facebook.com"> <i aria-hidden="true" class="fab fa-facebook-f"></i> <span class="sr-only">Facebook</span> </a>
+<a href="https://twitter.com"> <i aria-hidden="true" class="fab fa-twitter"></i> <span class="sr-only">Twitter</span> </a>
+<a href="https://instagram.com"> <i aria-hidden="true" class="fab fa-instagram"></i> <span class="sr-only">Instagram</span> </a>
+<a href="https://youtube.com"> <i aria-hidden="true" class="fab fa-youtube"></i> <span class="sr-only">Youtube</span> </a>
+</div><!-- /sidebar-one__social -->
+<div class="sidebar-one__newsletter sidebar-one__item">
+<label class="sidebar-one__title" for="sidebar-email">Boletín</label>
+<form action="#" class="sidebar-one__newsletter__inner mc-form" data-url="MAILCHIMP_FORM_URL">
+<input class="sidebar-one__newsletter__input" id="sidebar-email" name="EMAIL" placeholder="Correo electrónico" type="email"/>
+<button class="sidebar-one__newsletter__btn" type="submit"><span aria-hidden="true" class="icon-email"></span></button>
+</form>
+<div class="mc-form__response"></div><!-- /.mc-form__response -->
+</div><!-- /.sidebar-one__form -->
+</div><!-- /.sidebar__content -->
+</aside><!-- /.sidebar-one -->
+<div class="scroll-top" id="scroll-top">
+<span class="scroll-top-value" id="scroll-top-value"></span>
+</div>
+<script src="assets/vendors/jquery/jquery-3.7.0.min.js"></script>
+<script src="assets/vendors/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="assets/vendors/bootstrap-select/bootstrap-select.min.js"></script>
+<script src="assets/vendors/jarallax/jarallax.min.js"></script>
+<script src="assets/vendors/jquery-ui/jquery-ui.js"></script>
+<script src="assets/vendors/jquery-ajaxchimp/jquery.ajaxchimp.min.js"></script>
+<script src="assets/vendors/jquery-appear/jquery.appear.min.js"></script>
+<script src="assets/vendors/jquery-circle-progress/jquery.circle-progress.min.js"></script>
+<script src="assets/vendors/jquery-magnific-popup/jquery.magnific-popup.min.js"></script>
+<script src="assets/vendors/jquery-validate/jquery.validate.min.js"></script>
+<script src="assets/vendors/nouislider/nouislider.min.js"></script>
+<script src="assets/vendors/tiny-slider/tiny-slider.js"></script>
+<script src="assets/vendors/wnumb/wNumb.min.js"></script>
+<script src="assets/vendors/owl-carousel/js/owl.carousel.min.js"></script>
+<script src="assets/vendors/wow/wow.js"></script>
+<script src="assets/vendors/imagesloaded/imagesloaded.min.js"></script>
+<script src="assets/vendors/isotope/isotope.js"></script>
+<script src="assets/vendors/countdown/countdown.min.js"></script>
+<script src="assets/vendors/jquery-circleType/jquery.circleType.js"></script>
+<script src="assets/vendors/jquery-lettering/jquery.lettering.min.js"></script>
+<!-- template js -->
+<script src="assets/js/cityride.js"></script>
+<script src="assets/js/pages-enhanced.js"></script>
+<script id="toasa-wa-tip">
+(function(){
+  const btn = document.querySelector('.wa-float');
+  if(!btn) return;
+  let timer = null;
+  function showTip(){
+    btn.classList.add('wa-float--show-tip');
+    clearTimeout(timer);
+    timer = setTimeout(()=>btn.classList.remove('wa-float--show-tip'), 2600);
+  }
+  btn.addEventListener('touchstart', function(){ showTip(); }, {passive:true});
+  document.addEventListener('touchstart', function(e){
+    if(!btn.contains(e.target)) btn.classList.remove('wa-float--show-tip');
+  }, {passive:true});
+})();
+</script>
+</body>
+</html>
