@@ -18278,24 +18278,29 @@ img, video, iframe {
 
 
 /* ========================================================================== */
-/* ===== CityRide: Banner FULL en escritorio (AGREGADO) ====================== */
-/* - Móvil: banner va encima del precio (dentro de la columna izquierda)
-   - Escritorio: se muestra un banner FULL (fuera del row) y se oculta el de la columna
-   (No borra nada, solo sobre-escribe con media queries) */
+/* ===== CityRide: Banner FULL en escritorio (CORREGIDO) ====================== */
+/* - Móvil: se muestra el banner dentro de la columna (encima del precio)
+   - Escritorio (>= 992px): se muestra el banner FULL y se oculta el de la columna
+   Nota: usamos selectores específicos + !important para evitar que otro CSS lo sobreescriba.
+*/
 /* ========================================================================== */
-.cr-price-banner--desktop{ display:none; }
 
-@media (min-width: 992px){
-  .cr-price-banner--desktop{
-    display:block;
-    margin: 0 0 22px;
-  }
-  /* Oculta el banner que está dentro del col-lg-5 (solo en escritorio) */
-  .cityride-highlight .col-lg-5 > .cr-price-banner{
-    display:none;
-  }
+/* Móvil (por defecto): oculta el banner FULL (desktop) */
+.cityride-highlight .cr-price-banner--desktop{
+  display: none !important;
 }
 
+/* Escritorio (>= 992px): muestra el FULL y oculta el banner de la columna */
+@media (min-width: 992px){
+  .cityride-highlight .cr-price-banner--desktop{
+    display: block !important;
+    margin: 0 0 22px;
+  }
+
+  .cityride-highlight .col-lg-5 > .cr-price-banner:not(.cr-price-banner--desktop){
+    display: none !important;
+  }
+}
 
 /* --- Si antes pusiste max-width en escritorio, esto lo neutraliza para el banner FULL --- */
 @media (min-width: 992px){
