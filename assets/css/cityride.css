@@ -19459,4 +19459,9 @@ img, video, iframe {
   .main-slider-one__image{
     min-height: 190px;
   }
+
+}
+
+  .route-showcase__caption-text {
+    text-align: justify;
 }
