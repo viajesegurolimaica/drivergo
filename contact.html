@@ -312,6 +312,7 @@
 </div>
 </div>
 </section>
+
 <script>
 (function () {
   const PHONE = "51977795841";
@@ -320,27 +321,32 @@
 
   form.addEventListener("submit", function (e) {
     e.preventDefault();
+
     const fd = new FormData(form);
 
     const msg =
 `Hola, quiero reservar:
-- Nombre: ${fd.get("nombre") || ""}
-- Teléfono: ${fd.get("telefono") || ""}
-- Fecha: ${fd.get("fecha") || ""}
-- Hora: ${fd.get("hora") || ""}
-- Recojo: ${fd.get("recogo") || ""}
-- Destino: ${fd.get("destino") || ""}
-- Pasajeros: ${fd.get("pasajeros") || ""}
-- Equipaje: ${fd.get("equipaje") || ""}
-- N° de vuelo: ${fd.get("vuelo") || ""}
-- Medio de pago: ${fd.get("pago") || ""}
-- Detalles: ${fd.get("mensaje") || ""}`;
 
-    const url = "https://wa.link/u8d8r6" + PHONE + "?text=" + encodeURIComponent(msg);
+Nombre: ${fd.get("nombre") || ""}
+Teléfono: ${fd.get("telefono") || ""}
+Fecha: ${fd.get("fecha") || ""}
+Hora: ${fd.get("hora") || ""}
+Lugar de recojo: ${fd.get("recogo") || ""}
+Destino: ${fd.get("destino") || ""}
+Pasajeros: ${fd.get("pasajeros") || ""}
+Equipaje: ${fd.get("equipaje") || ""}
+N° de vuelo: ${fd.get("vuelo") || ""}
+Medio de pago: ${fd.get("pago") || ""}
+Mensaje adicional: ${fd.get("mensaje") || ""}`;
+
+    const url = "https://wa.me/" + PHONE + "?text=" + encodeURIComponent(msg);
     window.open(url, "_blank");
   });
 })();
 </script>
+
+
+
 <section class="contact-map">
 <div class="container-fluid">
 <div class="google-map google-map__contact">
@@ -541,7 +547,7 @@ Viaja seguro, cómodo y puntual con conductores verificados y vehículos moderno
     <path d="M6.62 10.79a15.053 15.053 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1.01-.24c1.12.37 2.33.57 3.58.57a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1C10.07 21 3 13.93 3 5a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.46.57 3.58a1 1 0 0 1-.24 1.01l-2.2 2.2z"/>
   </svg>
 </a>
-<a aria-label="Reservar por WhatsApp" class="wa-float" href="https://wa.link/u8d8r6" rel="noopener" target="_blank">
+<a aria-label="Reservar por WhatsApp" class="wa-float" href="https://wa.me/51977795841" rel="noopener" target="_blank">
 <span aria-hidden="true" class="wa-float__ping"></span>
 <span aria-hidden="true" class="wa-float__icon"><i class="fab fa-whatsapp"></i></span>
 <span class="wa-float__text">WhatsApp</span>
